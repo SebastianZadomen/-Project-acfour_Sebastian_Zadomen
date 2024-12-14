@@ -13,7 +13,7 @@ public class Exercici4
         int[] saveNum = new int[numLimit];
 
         Almacen(saveNum, numLimit);
-        
+
     }
     public static void Almacen(int[] saveNum, int numLimit)
     {
@@ -30,7 +30,7 @@ public class Exercici4
             else
             {
                 Console.WriteLine("Intente de nuevo.");
-                i--; 
+                i--;
             }
         }
         ResultsCounter(saveNum);
@@ -57,7 +57,7 @@ public class Exercici4
             arrayFinish += saveNum[i];
             if (i < saveNum.Length - 1)
             {
-                arrayFinish += ", ";  
+                arrayFinish += ", ";
             }
         }
 
@@ -66,12 +66,12 @@ public class Exercici4
     public static void DescendingOrder(int[] saveNum)
     {
         int n = saveNum.Length;
-        for (int i = 0; i < n - 1; i++)  
+        for (int i = 0; i < n - 1; i++)
         {
-            for (int j = 0; j < n - 1 - i; j++) 
+            for (int j = 0; j < n - 1 - i; j++)
             {
-                if (saveNum[j] < saveNum[j + 1])  
-                {             
+                if (saveNum[j] < saveNum[j + 1])
+                {
                     int temp = saveNum[j];
                     saveNum[j] = saveNum[j + 1];
                     saveNum[j + 1] = temp;
