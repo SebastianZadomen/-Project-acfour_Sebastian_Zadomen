@@ -34,6 +34,7 @@ public class Exercici4
             }
         }
         ResultsCounter(saveNum);
+        DescendingOrder(saveNum);
     }
     public static int? EvaluateValue(int numSaved)
     {
@@ -60,6 +61,24 @@ public class Exercici4
             }
         }
 
-        Console.WriteLine("Los números guardados son: " + arrayFinish);
+        Console.WriteLine("Los números son: " + arrayFinish);
+    }
+    public static void DescendingOrder(int[] saveNum)
+    {
+        int n = saveNum.Length;
+        for (int i = 0; i < n - 1; i++)  
+        {
+            for (int j = 0; j < n - 1 - i; j++) 
+            {
+                if (saveNum[j] < saveNum[j + 1])  
+                {             
+                    int temp = saveNum[j];
+                    saveNum[j] = saveNum[j + 1];
+                    saveNum[j + 1] = temp;
+                }
+            }
+        }
+        Console.WriteLine("Su numero ordenado de manera descendente es:");
+        ResultsCounter(saveNum);
     }
 }
